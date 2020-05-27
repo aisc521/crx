@@ -1,0 +1,19 @@
+#端口号
+server:
+  port: 8761
+eureka:
+  instance:
+    #本地ip
+    hostname: localhost
+  client:
+    #是否需要将本地的Eureka 注册到注册中心去
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      #调用的eureka服务地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+
+
+
